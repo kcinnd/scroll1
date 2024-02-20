@@ -1,8 +1,15 @@
-// Listen for a click event on the scroll element
-document.getElementById('scroll').addEventListener('click', function() {
-    // Get the riddle element
+document.getElementById('scrollContainer').addEventListener('click', function() {
+    var scroll = document.getElementById('scroll');
     var riddle = document.getElementById('riddle');
-    
-    // Toggle the 'unravel' class to show or hide the riddle text
-    riddle.classList.toggle('unravel');
+
+    // Toggle scroll state
+    scroll.classList.toggle('rolled');
+    scroll.classList.toggle('unrolled');
+
+    // Toggle riddle visibility based on scroll state
+    if (scroll.classList.contains('unrolled')) {
+        riddle.classList.add('unravel');
+    } else {
+        riddle.classList.remove('unravel');
+    }
 });
