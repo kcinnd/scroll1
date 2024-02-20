@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Example font import */
+
 .scroll {
     background: url('scroll-image.jpg') no-repeat center center;
-    width: 200px; /* Adjust based on your image size */
-    height: 200px; /* Adjust based on your image size */
+    width: 300px; /* Adjust based on your image size */
+    height: 300px; /* Adjust based on your image size */
     cursor: pointer;
-    transition: all 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .hidden {
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease;
+    font-family: 'Great Vibes', cursive; /* Example fancy font */
+    font-size: 18px;
+    color: #5a3825; /* Choose a color that complements your scroll */
+    text-align: center;
+    padding: 20px;
 }
 
 .unravel {
