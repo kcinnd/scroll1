@@ -1,35 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Example font import */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Example fancy font */
+
+.scroll-container {
+    cursor: pointer;
+    width: fit-content;
+}
 
 .scroll {
-    background: url('scroll-image.jpg') no-repeat center center;
-    width: 300px; /* Adjust based on your image size */
-    height: 300px; /* Adjust based on your image size */
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+}
+
+.rolled {
+    background-image: url('https://image.similarpng.com/thumbnail/2020/08/Graduation-diploma-on-transparent-PNG.png');
+    width: 100px; /* Adjust based on the rolled-up image size */
+    height: 100px; /* Adjust based on the rolled-up image size */
+}
+
+.unrolled {
+    background-image: url('https://media.istockphoto.com/id/164486891/vector/off-white-blank-unrolled-paper-scroll-image.jpg?s=612x612&w=0&k=20&c=yYfaQHwwtDfHFGYiRs8VoL--9MX66DjkHGkjtCYIPPQ=');
+    width: 612px; /* Adjust based on the unrolled image size */
+    height: 612px; /* Adjust based on the unrolled image size */
 }
 
 .hidden {
     display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    font-family: 'Great Vibes', cursive; /* Example fancy font */
+    font-family: 'Great Vibes', cursive;
     font-size: 18px;
-    color: #5a3825; /* Choose a color that complements your scroll */
+    color: #5a3825;
     text-align: center;
     padding: 20px;
 }
 
 .unravel {
     display: block;
-    opacity: 1;
-    animation: enhancedUnravel 1.5s forwards;
-}
-
-@keyframes enhancedUnravel {
-    0% { transform: scale(0.8) rotate(-5deg); opacity: 0; }
-    50% { transform: scale(1.05) rotate(2deg); opacity: 0.5; }
-    100% { transform: scale(1) rotate(0deg); opacity: 1; }
 }
