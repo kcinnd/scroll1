@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Example fancy font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Fancy font for riddle text */
 
 .scroll-container {
     cursor: pointer;
-    width: fit-content;
+    width: 612px; /* Width set to match the unrolled scroll's width */
+    display: flex;
+    justify-content: center; /* Center the rolled-up scroll within the container */
 }
 
 .scroll {
     background-size: contain;
     background-repeat: no-repeat;
     transition: all 0.5s ease;
+    width: 100%; /* Scroll takes full width of its container */
+    height: 612px; /* Adjust based on the unrolled image height or desired aspect ratio */
 }
 
 .rolled {
-    background-image: url('https://image.similarpng.com/thumbnail/2020/08/Graduation-diploma-on-transparent-PNG.png');
-    width: 100px; /* Adjust based on the rolled-up image size */
-    height: 100px; /* Adjust based on the rolled-up image size */
+    background-image: url('https://pnghq.com/wp-content/uploads/diploma-background-png-transparent-background.png');
+    /* Height adjusted if necessary to maintain aspect ratio */
 }
 
 .unrolled {
     background-image: url('https://media.istockphoto.com/id/164486891/vector/off-white-blank-unrolled-paper-scroll-image.jpg?s=612x612&w=0&k=20&c=yYfaQHwwtDfHFGYiRs8VoL--9MX66DjkHGkjtCYIPPQ=');
-    width: 612px; /* Adjust based on the unrolled image size */
-    height: 612px; /* Adjust based on the unrolled image size */
+    /* Full size for the unrolled scroll */
 }
 
 .hidden {
