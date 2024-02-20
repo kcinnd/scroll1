@@ -4,19 +4,25 @@
     height: 200px; /* Adjust based on your image size */
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden {
     display: none;
-    transition: all 0.5s ease;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .unravel {
     display: block;
-    animation: unravel 1s forwards;
+    opacity: 1;
+    animation: enhancedUnravel 1.5s forwards;
 }
 
-@keyframes unravel {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
+@keyframes enhancedUnravel {
+    0% { transform: scale(0.8) rotate(-5deg); opacity: 0; }
+    50% { transform: scale(1.05) rotate(2deg); opacity: 0.5; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
 }
