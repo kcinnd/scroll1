@@ -1,0 +1,22 @@
+.scroll {
+    background: url('scroll-image.jpg') no-repeat center center;
+    width: 200px; /* Adjust based on your image size */
+    height: 200px; /* Adjust based on your image size */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hidden {
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.unravel {
+    display: block;
+    animation: unravel 1s forwards;
+}
+
+@keyframes unravel {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
